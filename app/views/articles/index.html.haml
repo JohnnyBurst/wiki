@@ -5,4 +5,4 @@
   %p
     Published at
     = article.created_at.strftime('%b %d, %Y')
-  %p= truncate(article.content, length: 200)
+  %p= article.content.truncate_words(30)
